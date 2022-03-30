@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
-date: "Fall 2020"
+author: "Madeleine Alseryani"
+date: "Spring 2022"
 output: html_document
 ---
 
@@ -23,14 +23,75 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+Neck has an adjusted R squared value of 0.7476 and comes in third place of best fit.
+
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Chest has an adjusted R squared value of 0.7869. Chest is the second best fit.
+
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Weight has an adjusted R squared value of 0.7423 and places in fourth place.
+
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+Headwth has an adjusted R squared value of 0.5321 and places in fifth place.
+
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Headlen has an adjusted R squared value of 0.8434. Headlen is the best fit. 
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+Age has an adjusted R squared value of 0.5073 and places in sixth place.
+
+
+```{r}
+simp <- lm(LENGTH~MONTH,data=bears)
+plot(LENGTH~MONTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+Month has an adjusted R squared value of -0.01153 and places in seventh place.
+
+```{r}
+simp <- lm(LENGTH~SEX,data=bears)
+plot(LENGTH~SEX,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+Sex has an adjusted R squared value of -0.008373 and comes in last place as the worst fit.
+
 
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
-```{r}
-new <- data.frame(NECK=c(17,22,26))
-predict(simp,new)
-predict(simp,new,se.fit=TRUE)
-```
+
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
