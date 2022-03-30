@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
 ## make a simple regression model
 
 ```{r}
@@ -88,10 +90,4 @@ summary.lm(simp)
 ```
 Sex has an adjusted R squared value of -0.008373 and comes in last place as the worst fit.
 
-
-## now predict the length of a bear who has a neck of 17, 22 and 26
-
-
-
-## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
